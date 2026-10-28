@@ -1,0 +1,42 @@
+
+import java.util.Scanner;
+
+public class ExercicioVetor {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int[] numeros = new int[6];
+        int somaPares = 0;
+        int quantidadeImpares = 0;
+
+        for (int i = 0; i < 6; i++) {
+            System.out.print("Digite um número: ");
+            numeros[i] = sc.nextInt();
+        }
+
+        System.out.println("Números pares digitados:");
+
+        for (int i = 0; i < 6; i++) {
+            if (numeros[i] % 2 == 0) {
+                System.out.println(numeros[i]);
+                somaPares += numeros[i];
+            }
+        }
+
+        System.out.println("Soma dos pares: " + somaPares);
+
+        System.out.println("Números ímpares digitados:");
+
+        for (int i = 0; i < 6; i++) {
+            if (numeros[i] % 2 != 0) {
+                System.out.println(numeros[i]);
+                quantidadeImpares++;
+            }
+        }
+
+        System.out.println("Quantidade de ímpares: " + quantidadeImpares);
+
+        sc.close();
+    }
+}
